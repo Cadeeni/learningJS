@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="age" placeholder="age" type="number" required>
+    <button onclick="check()">Submit</button>
+
+    <h3 id="results">N/A</h3>
+
+    <script>
+
+       const Age = document.getElementById('age');
+       const Results = document.getElementById('results');
+
+       function check() {
+       if (Age.value >= 21) {
+        Results.innerHTML = 'Passed!'
+       }
+       else if (Age.value <= -1) {
+        Results.innerHTML = 'Please enter your real age!'
+       }
+       else {
+
+        Results.innerHTML = `Failed, ${21 - Age.value} year(s) to go!`
+
+       }
+     }
+
+     console.log(true || flase)
+    </script>
+
+</body>
+</html>
